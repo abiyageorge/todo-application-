@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Addtodo from './components/Addtodo';
+import Listtodo from './components/Listtodo';
+import React, { useState } from 'react'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const[uploadTodoStatus,setUploadTodoStatus]=useState({})
+return(
+  <div className='d-grid justify-content-center align-items-center'>
+    
+    <Addtodo setUploadTodoStatus={setUploadTodoStatus}/>
+  
+    <Listtodo uploadTodoStatu ={uploadTodoStatus}/>
+
+  </div>
+)
+
+
+
+
 }
+ 
 
 export default App;
